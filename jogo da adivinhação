@@ -1,0 +1,20 @@
+# Desafio: Adivinhar o número secreto
+
+# Número secreto definido pelo programador
+numero_secreto = 42  
+
+# O jogador tem até 5 tentativas
+for tentativa in range(1, 6):
+    palpite = int(input(f"Tentativa {tentativa}/5 - Digite seu palpite: "))
+
+    if palpite == numero_secreto:
+        print("🎉 Parabéns! Você acertou o número secreto!")
+        break
+    elif palpite < numero_secreto:
+        print("🔼 O número secreto é MAIOR que o seu palpite.")
+    else:
+        print("🔽 O número secreto é MENOR que o seu palpite.")
+
+# Caso o jogador não acerte em nenhuma tentativa
+else:
+    print(f"❌ Você perdeu! O número secreto era {numero_secreto}.")
